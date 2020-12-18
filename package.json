@@ -23,6 +23,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.15",
     "passport": "^0.4.1",
-    "react": "^17.0.1"
+    "passport-google-oauth2": "^0.2.0",
+    "react": "^17.0.1",
+    "redux": "^4.0.5"
   }
 }

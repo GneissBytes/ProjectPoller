@@ -18,7 +18,7 @@ db.once("open", () => (console.log("connection to database established")));
 
 
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.send('working')
 });
 

@@ -23,5 +23,5 @@ app.get('*', (req, res) => {
 });
 port = process.env.PORT || 3000
 app.listen(port, () =>{
-    console.log(`listening ${port}`)
+    console.log(`listening at ${port}`)
 })

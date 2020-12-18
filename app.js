@@ -19,7 +19,7 @@ db.once("open", () => (console.log("connection to database established")));
 
 
 app.get('*', (req, res) => {
-    res.send('working')
+    res.send('<h1>It is I, venomous one!</h1>')
 });
 
 app.listen(3000, () =>{

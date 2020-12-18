@@ -21,7 +21,7 @@ db.once("open", () => (console.log("connection to database established")));
 app.get('*', (req, res) => {
     res.send('<h1>It is I, venomous one!</h1>')
 });
-
-app.listen(3000, () =>{
-    console.log('listening at 3000')
+port = process.env.PORT || 3000
+app.listen(port, () =>{
+    console.log(`listening ${port}`)
 })

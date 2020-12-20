@@ -26,7 +26,7 @@ app.get('*', (req, res) => {
     res.send('<h1>404 not found</h1>')
 });
 
-port = process.env.PORT || 3000
+port = process.env.PORT || 5000
 app.listen(port, () => {
     console.log(`listening at ${port}`)
 })

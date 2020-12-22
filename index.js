@@ -34,7 +34,7 @@ if (process.env.NODE_ENV == 'production') {
     app.use(express.static(path.join(__dirname, 'client/build')))
     // Express will send index.html if route is unknown
     app.get('*', (_req, res) => {
-        res.send(path.resolve(__dirname, 'client', 'build', 'index.hmtl'))
+        res.send(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
 } else {
     app.get('*', (_req, res) => {

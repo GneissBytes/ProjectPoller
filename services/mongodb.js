@@ -1,6 +1,5 @@
 const mongoose = require("mongoose")
 
-
 const dbUrl = process.env.MONGODB_URL || 'mongodb://localhost:27017/react-app'
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -12,3 +11,7 @@ mongoose.connect(dbUrl, {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console.log("error connecting to database")));
 db.once("open", () => (console.log("connection to database established")));
+
+require('../models/User')
+require('../models/Survey')
+

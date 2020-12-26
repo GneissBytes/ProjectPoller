@@ -3,12 +3,12 @@ if (process.env.NODE_ENV !== "production") require('dotenv').config()
 const express = require('express')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
-require('./models/User')
 require('./services/mongodb')
 require('./services/passport')
 const authRoutes = require('./routes/authRoutes')
 const apiRoutes = require('./routes/apiRoutes')
 const billingRoutes = require('./routes/billingRoutes')
+const surveyRoutes = require('./routes/surveyRoutes')
 
 const app = express()
 
@@ -23,8 +23,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/api', apiRoutes)
-app.use('/api', billingRoutes)
-app.use('/auth', authRoutes)
+app.use('/api/stripe', billingRoutes)
+app.use('/api/surveys', surveyRoutes)
+app.use('/auth/google', authRoutes)
 
 
 

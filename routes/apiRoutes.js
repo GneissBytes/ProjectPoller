@@ -1,15 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const {logout, getCurrentUser } = require('../controllers/apiControllers')
 
+router.get('/current_user', getCurrentUser);
 
-router.get('/current_user', (req, res) => {
-    res.send(req.user)
-});
-
-router.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('/')
-});
+router.get('/logout', logout);
 
 
 module.exports = router;
